@@ -61,10 +61,64 @@
 			
 	</div>
 
+<!-- reset button -->
+  <div class="wrapper">
+    <button>reset</button>
+  </div>
 
-<script type="text/javascript">
-	// your solution here
+  <script type="text/javascript">
+    // your solution here
+    // .hide(): https://api.jquery.com/hide/
+    // .hover(): https://api.jquery.com/hover/
+    // click on 1 purple closes all purple
+    $(".p2-circle.bg-purple").click(function(){
+      $(".p2-circle.bg-purple").hide("slow");
+    });
 
-</script>
+    // click on 1 green closes all green and blue
+    $(".p2-circle.bg-green").click(function(){
+      $(".p2-circle.bg-green").hide("slow");
+      $(".p2-circle.bg-blue").hide("slow");
+    });
+
+    // click on 1 orange border closes all orange borders
+    $(".p2-circle.bg-orange.p2-border").click(function(){
+      $(".p2-circle.bg-orange.p2-border").hide("slow");
+    });
+
+    //move mouse across gradient hides that only gradient 
+    $("#gradient-circle").hover(function(){
+      $("#gradient-circle").hide("slow");
+    });
+
+    // reset function functionality: https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery
+    $("button").click(function(){
+//       if ($(element).css("visibility") == "hidden"){
+      if ($(".p2-circle.bg-purple").is(":hidden")){
+        $(".p2-circle.bg-purple").show();
+      }
+      
+      if ($(".p2-circle.bg-green").is(":hidden")){
+        $(".p2-circle.bg-green").show();
+      }
+      
+      if ($(".p2-circle.bg-yellow").is(":hidden")){
+        $(".p2-circle.bg-yellow").show(); // does this include the border?
+      }
+      
+      if ($(".p2-circle.bg-orange").is(":hidden")){
+        $(".p2-circle.bg-orange").show();
+      }
+      
+      if ($(".p2-circle.bg-blue").is(":hidden")){
+        $(".p2-circle.bg-blue").show();
+      }
+      
+      if ($("#gradient-circle").is(":hidden")){
+        $("#gradient-circle").show();
+      }
+    });
+
+  </script>
 </body>
 </html>
