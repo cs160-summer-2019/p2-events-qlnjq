@@ -93,30 +93,36 @@
 
     // reset function functionality: https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery
     $("button").click(function(){
-//       if ($(element).css("visibility") == "hidden"){
-      if ($(".p2-circle.bg-purple").is(":hidden")){
-        $(".p2-circle.bg-purple").show();
-      }
+// //       if ($(element).css("visibility") == "hidden"){
+//       if ($(".p2-circle.bg-purple").is(":hidden")){
+//         $(".p2-circle.bg-purple").show();
+//       }
       
-      if ($(".p2-circle.bg-green").is(":hidden")){
-        $(".p2-circle.bg-green").show();
-      }
+//       if ($(".p2-circle.bg-green").is(":hidden")){
+//         $(".p2-circle.bg-green").show();
+//       }
       
-      if ($(".p2-circle.bg-yellow").is(":hidden")){
-        $(".p2-circle.bg-yellow").show(); // does this include the border?
-      }
+//       if ($(".p2-circle.bg-yellow").is(":hidden")){
+//         $(".p2-circle.bg-yellow").show(); // does this include the border?
+//       }
       
-      if ($(".p2-circle.bg-orange").is(":hidden")){
-        $(".p2-circle.bg-orange").show();
-      }
+//       if ($(".p2-circle.bg-orange").is(":hidden")){
+//         $(".p2-circle.bg-orange").show();
+//       }
       
-      if ($(".p2-circle.bg-blue").is(":hidden")){
-        $(".p2-circle.bg-blue").show();
-      }
+//       if ($(".p2-circle.bg-blue").is(":hidden")){
+//         $(".p2-circle.bg-blue").show();
+//       }
       
-      if ($("#gradient-circle").is(":hidden")){
-        $("#gradient-circle").show();
-      }
+//       if ($("#gradient-circle").is(":hidden")){
+//         $("#gradient-circle").show();
+//       }
+      $(".p2-circle.bg-purple:hidden").show();
+      $(".p2-circle.bg-green:hidden").show();
+      $(".p2-circle.bg-yellow:hidden").show();
+      $(".p2-circle.bg-orange:hidden").show();
+      $(".p2-circle.bg-blue:hidden").show();
+      $("#gradient-circle:hidden").show();
     });
 
   </script>
